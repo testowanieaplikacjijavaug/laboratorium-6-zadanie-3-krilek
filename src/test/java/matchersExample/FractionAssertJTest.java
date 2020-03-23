@@ -78,4 +78,20 @@ public class FractionAssertJTest {
         assertThatThrownBy(() -> {Fraction.of(Integer.MAX_VALUE, 0);
         }).isInstanceOf(IllegalArgumentException.class);
     }
+    @Test
+    public void AddingFractions(){
+        assertThat(Fraction.HALF.add(Fraction.HALF)).isEqualTo(Fraction.FULL);
+    }
+    @Test
+    public void AddingFractionsShouldBeCutDown(){
+        assertThat(Fraction.of(2,3).add(Fraction.of(4,3))).isEqualTo(Fraction.of(2,1));
+    }
+    @Test
+    public void CheckGettingDoubleValue() {
+        assertThat(Fraction.of(1, 2).doubleValue()).isBetween(0.4, 0.6);
+    }
+    @Test
+    public void CheckEqualityWithWrongType(){
+        assertThat(Fraction.FULL.equals("test")).isFalse();
+    }
 }

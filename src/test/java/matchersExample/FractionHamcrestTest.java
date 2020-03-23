@@ -85,5 +85,22 @@ public class FractionHamcrestTest {
         assertThatThrownBy(() -> {Fraction.of(Integer.MAX_VALUE, 0);
         }).isInstanceOf(IllegalArgumentException.class);
     }
-
+    @Test
+    public void AddingFractions(){
+        assertThat(Fraction.HALF.add(Fraction.HALF), is(Fraction.FULL));
+    }
+    @Test
+    public void AddingFractionsShouldBeCutDown(){
+        Fraction added = Fraction.of(2,3).add(Fraction.of(4,3));
+        Fraction expected = Fraction.of(2,1);
+        assertThat(added, is(expected));
+    }
+    @Test
+    public void CheckGettingDoubleValue() {
+        assertThat(Fraction.of(1, 2).doubleValue(), is(closeTo(0.5, 0.01)));
+    }
+    @Test
+    public void CheckEqualityWithWrongType(){
+        assertThat(Fraction.FULL.equals("test"), is(false));
+    }
 }
