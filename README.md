@@ -1,0 +1,3 @@
+![GitHub Classroom Workflow](https://github.com/testowanieaplikacjijavaug/laboratorium-6-zadanie-3-krilek/workflows/GitHub%20Classroom%20Workflow/badge.svg)
+
+[![codecov.io](https://codecov.io/gh/testowanieaplikacjijavaug/laboratorium-6-zadanie-3-krilek/branch/master/graph/badge.svg?branch=master)](https://codecov.io/gh/testowanieaplikacjijavaug/laboratorium-6-zadanie-3-krilek/branch/master?branch=master)
